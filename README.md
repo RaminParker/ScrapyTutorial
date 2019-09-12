@@ -6,3 +6,7 @@ name
 pip install scrapy
 
 scrapy startproject quotetutorial
+
+cd quotetutorial
+
+scrapy crawl quotes
