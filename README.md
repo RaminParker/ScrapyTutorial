@@ -10,3 +10,20 @@ scrapy startproject quotetutorial
 cd quotetutorial
 
 scrapy crawl quotes
+
+In terminal:
+
+scrapy shell "http://quotes.toscrape.com/"
+
+response.xpath("//title/text()").extract()
+
+response.xpath("//span[@class='text']/text()").extract()   --> make sure to use different quote symbols
+
+response.css("li.next a").xpath("@href").extract()
+
+response.css("a").xpath("@href").extract()
+
+scrapy crawl quotes -o items.json
+
+scrapy crawl quotes -o items.csv
+
